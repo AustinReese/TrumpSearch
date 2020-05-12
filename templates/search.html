@@ -1,0 +1,27 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+	<a class="btn btn-large btn-info" href="/">Search again</a>
+	<h3>Results</h3>
+	<div class = "table-responsive">
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					{% for header in range(headers|length) %}
+					<th scope="col">{{headers[header]}}</th>
+					{% endfor %}
+				</tr>
+			</thead>
+			<tbody>
+				{% for row in range(data|length) %}
+				<tr>
+					{% for entry in range(data[row]|length) %}
+					<td>{{data[row][entry]}}</td>
+					{% endfor %}
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}

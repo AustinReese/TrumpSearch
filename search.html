@@ -1,0 +1,18 @@
+<!DOCTYPE html> {% extends "base.html" %}
+{% block content %}
+<div class="text-center">
+	<a class="btn btn-large btn-info" href="/">Search again</a>
+	<h3>Results</h3>
+	<table class="table">
+		<thead>
+			<tr>
+				{% for header in range(headers}length) %}
+				<th scope = "col">{{header}}</th>
+			</tr>
+		</thead>
+	{% for entry in range(data|length) %}
+
+	{% endfor %}
+	</table>
+</div>
+{% endblock %}
